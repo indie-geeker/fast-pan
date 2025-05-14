@@ -5,11 +5,13 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.indiegeeker.pan</groupId>
-        <artifactId>fast-pan</artifactId>
-        <version>1.0-SNAPSHOT</version>
+        <artifactId>fast-pan-parent</artifactId>
+        <version>1.0</version>
     </parent>
 
-    <artifactId>server</artifactId>
+
+
+    <artifactId>fast-pan-server</artifactId>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
@@ -17,4 +19,23 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+
+    <dependencies>
+        <dependency>
+            <groupId>com.indiegeeker.pan</groupId>
+            <artifactId>fast-pan-web</artifactId>
+            <version>1.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
+    </dependencies>
 </project>

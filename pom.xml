@@ -11,17 +11,21 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <groupId>com.indiegeeker.pan</groupId>
-    <artifactId>fast-pan</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <name>fast-pan</name>
-    <description>Fast Pan服务端</description>
     <modules>
         <module>framework</module>
         <module>server</module>
         <module>distribution</module>
     </modules>
+
+    <groupId>com.indiegeeker.pan</groupId>
+    <artifactId>fast-pan-parent</artifactId>
+    <version>1.0</version>
+    <name>fast-pan-parent</name>
+    <description>Fast Pan服务端</description>
     <packaging>pom</packaging>
+
+
+
 
 
 
