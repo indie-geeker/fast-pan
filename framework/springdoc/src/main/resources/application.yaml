@@ -1,0 +1,66 @@
+springdoc:
+  # ===== API 文档基本配置 =====
+  api-docs:
+    enabled: true                       # 是否启用 API 文档，默认为 true
+    path: /api-doc                      # 定义 OpenAPI 文档的访问路径，默认为 /v3/api-docs
+    groups:
+      enabled: true                     # 是否启用分组功能，默认为 true
+    resolve-schema-properties: true     # 是否解析模式属性，默认为 true
+
+  # ===== Swagger UI 界面配置 =====
+  swagger-ui:
+    path: /swagger-ui.html              # 定义 Swagger UI 的访问路径，默认为 /swagger-ui.html
+    tags-sorter: alpha                  # 标签排序方式：alpha（字母顺序）、method（HTTP方法顺序）
+    operations-sorter: alpha            # 操作排序方式：alpha（字母顺序）、method（HTTP方法顺序）
+    disable-swagger-default-url: true   # 禁用默认的 Swagger URL，避免加载外部资源
+    try-it-out-enabled: true            # 启用 "Try it out" 功能，允许用户直接在 UI 中测试 API
+    doc-expansion: none                 # 文档展开方式：none（默认折叠）、list（展开标签）、full（完全展开）
+    filter: true                        # 是否启用过滤功能，允许用户搜索 API
+    syntax-highlight:
+      activated: true
+    display-request-duration: true      # 是否显示请求持续时间
+    deep-linking: true                  # 是否启用深度链接，允许直接链接到特定操作
+    default-models-expand-depth: 1      # 模型展开深度，默认为 1
+    default-model-expand-depth: 1       # 默认模型展开深度，默认为 1
+    show-extensions: true               # 是否显示扩展信息
+    show-common-extensions: true        # 是否显示通用扩展信息
+
+  # ===== 包扫描配置 =====
+  packages-to-scan: com.indiegeeker.pan.server   # 定义需要扫描以生成 API 文档的包路径
+  paths-to-match: /**                            # 匹配所有路径
+  paths-to-exclude: /error, /actuator/**         # 排除的路径
+
+  # ===== 缓存配置 =====
+  cache:
+    disabled: false                     # 是否禁用缓存，默认为 false（启用缓存）
+
+  # ===== 全局媒体类型配置 =====
+  default-produces-media-type: application/json  # 定义默认的响应媒体类型
+  default-consumes-media-type: application/json  # 定义默认的请求媒体类型
+
+  # ===== 模型转换配置 =====
+  model-and-view-allowed: true          # 是否允许 ModelAndView
+  override-with-generic-response: true  # 是否使用泛型响应覆盖
+  remove-broken-reference-definitions: true  # 是否移除损坏的引用定义
+
+  # ===== 分组文档配置 =====
+  group-configs:
+    # 用户模块分组
+    - group: user                       # 分组名称
+      paths-to-match: /user/**          # 匹配特定路径规则
+      packages-to-scan: com.indiegeeker.pan.server.modules.user  # 分组对应的包路径
+    
+    # 文件模块分组
+    - group: file                       # 分组名称
+      paths-to-match: /file/**          # 匹配特定路径规则
+      packages-to-scan: com.indiegeeker.pan.server.modules.file  # 分组对应的包路径
+    
+    # 分享模块分组
+    - group: share                      # 分组名称
+      paths-to-match: /share/**         # 匹配特定路径规则
+      packages-to-scan: com.indiegeeker.pan.server.modules.share  # 分组对应的包路径
+    
+    # 测试模块分组
+    - group: test                       # 分组名称
+      paths-to-match: /test/**          # 匹配特定路径规则
+      packages-to-scan: com.indiegeeker.pan.server.modules.test  # 分组对应的包路径

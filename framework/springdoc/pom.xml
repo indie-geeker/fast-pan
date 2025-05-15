@@ -5,13 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.indiegeeker.pan</groupId>
-        <artifactId>fast-pan-parent</artifactId>
+        <artifactId>fast-pan-framework</artifactId>
         <version>1.0</version>
     </parent>
 
-
-
-    <artifactId>fast-pan-server</artifactId>
+    <artifactId>fast-pan-springdoc</artifactId>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
@@ -23,25 +21,25 @@
     <dependencies>
         <dependency>
             <groupId>com.indiegeeker.pan</groupId>
-            <artifactId>fast-pan-web</artifactId>
+            <artifactId>fast-pan-core</artifactId>
             <version>1.0</version>
         </dependency>
 
         <dependency>
-            <groupId>com.indiegeeker.pan</groupId>
-            <artifactId>fast-pan-springdoc</artifactId>
-            <version>1.0</version>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
         </dependency>
 
+        <!--lombok-->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-devtools</artifactId>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
         </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-configuration-processor</artifactId>
-            <optional>true</optional>
         </dependency>
     </dependencies>
 </project>

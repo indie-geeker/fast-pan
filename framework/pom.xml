@@ -16,6 +16,7 @@
         <module>core</module>
         <module>cache</module>
         <module>web</module>
+        <module>springdoc</module>
     </modules>
 
     <properties>
