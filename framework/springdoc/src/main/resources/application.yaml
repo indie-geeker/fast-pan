@@ -9,7 +9,7 @@ springdoc:
 
   # ===== Swagger UI 界面配置 =====
   swagger-ui:
-    path: /swagger-ui.html              # 定义 Swagger UI 的访问路径，默认为 /swagger-ui.html
+    path: /doc.html              # 定义 Swagger UI 的访问路径，默认为 /swagger-ui.html
     tags-sorter: alpha                  # 标签排序方式：alpha（字母顺序）、method（HTTP方法顺序）
     operations-sorter: alpha            # 操作排序方式：alpha（字母顺序）、method（HTTP方法顺序）
     disable-swagger-default-url: true   # 禁用默认的 Swagger URL，避免加载外部资源
